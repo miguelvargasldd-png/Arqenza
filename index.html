@@ -2,73 +2,121 @@
 <html lang="es">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ARQENZA | Arquitectura y Marketing</title>
+<title>ARQENZA | Arquitectura & Marketing</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
 
-body{
-font-family: Arial;
+:root{
+--dorado:#D4AF37;
+--azul:#1B2441;
+--gris:#EFEFEF;
+--gris2:#BFC6D2;
+}
+
+*{
 margin:0;
-background:#f5f5f5;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Helvetica, Arial, sans-serif;
+background:var(--gris);
 color:#333;
 }
 
 header{
-background:#111;
+background:var(--azul);
 color:white;
-padding:40px;
 text-align:center;
+padding:80px 20px;
+}
+
+header img{
+width:180px;
+margin-bottom:20px;
 }
 
 header h1{
-font-size:45px;
-margin:0;
+font-family:'Montserrat',sans-serif;
+font-size:50px;
+letter-spacing:3px;
 }
 
 header p{
-font-size:18px;
+font-family:'Lora',serif;
+color:var(--gris2);
+margin-top:10px;
+font-size:20px;
 }
 
 nav{
-background:#222;
-padding:10px;
+background:#111a33;
+padding:15px;
 text-align:center;
 }
 
 nav a{
 color:white;
-margin:15px;
+margin:0 20px;
 text-decoration:none;
-font-weight:bold;
+font-family:'Montserrat',sans-serif;
+font-weight:600;
+}
+
+nav a:hover{
+color:var(--dorado);
 }
 
 section{
-padding:50px;
+padding:80px 10%;
+}
+
+h2{
 text-align:center;
+margin-bottom:50px;
+font-size:35px;
+font-family:'Montserrat',sans-serif;
+color:var(--azul);
 }
 
 .servicios{
 display:flex;
-justify-content:center;
 flex-wrap:wrap;
-gap:30px;
+justify-content:center;
+gap:40px;
 }
 
 .card{
 background:white;
-padding:25px;
-width:250px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+padding:30px;
+width:260px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 8px 25px rgba(0,0,0,0.1);
+border-top:4px solid var(--dorado);
+}
+
+.card h3{
+font-family:'Montserrat',sans-serif;
+color:var(--azul);
+}
+
+.card p{
+font-family:'Lora',serif;
+margin-top:10px;
 }
 
 .galeria{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
 }
 
 .galeria img{
@@ -76,23 +124,33 @@ width:100%;
 border-radius:10px;
 }
 
+.contacto{
+text-align:center;
+font-family:'Lora',serif;
+font-size:20px;
+}
+
 .whatsapp{
 position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px 20px;
-border-radius:50px;
+bottom:25px;
+right:25px;
+background:var(--dorado);
+color:#1B2441;
+padding:18px 25px;
+border-radius:40px;
 text-decoration:none;
 font-weight:bold;
+font-family:'Montserrat',sans-serif;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
 footer{
-background:#111;
+background:var(--azul);
 color:white;
 text-align:center;
-padding:20px;
+padding:30px;
+margin-top:50px;
+font-family:'Lora',serif;
 }
 
 </style>
@@ -103,8 +161,11 @@ padding:20px;
 
 <header>
 
+<img src="LOGO.jpeg">
+
 <h1>ARQENZA</h1>
-<p>Arquitectura • Diseño • Marketing</p>
+
+<p>Arquitectura | Marketing | Visualización 3D</p>
 
 </header>
 
@@ -118,23 +179,23 @@ padding:20px;
 
 <section id="servicios">
 
-<h2>Nuestros Servicios</h2>
+<h2>Servicios</h2>
 
 <div class="servicios">
 
 <div class="card">
 <h3>Diseño Arquitectónico</h3>
-<p>Proyectos arquitectónicos modernos y funcionales.</p>
+<p>Proyectos arquitectónicos modernos y funcionales adaptados a cada cliente.</p>
 </div>
 
 <div class="card">
 <h3>Render 3D</h3>
-<p>Visualización profesional de proyectos.</p>
+<p>Visualización realista de proyectos para presentación profesional.</p>
 </div>
 
 <div class="card">
 <h3>Marketing Inmobiliario</h3>
-<p>Estrategias digitales para vender proyectos.</p>
+<p>Estrategias digitales para promoción de proyectos inmobiliarios.</p>
 </div>
 
 </div>
@@ -145,7 +206,7 @@ padding:20px;
 
 <h2>Proyectos</h2>
 
-<div class="Descargas">
+<div class="galeria">
 
 <img src="1 imagen.png">
 <img src="2 imagen.png">
@@ -159,13 +220,17 @@ padding:20px;
 
 <h2>Contacto</h2>
 
-<p>Contáctanos para desarrollar tu proyecto.</p>
+<div class="contacto">
 
-<p><strong>WhatsApp:</strong> +52 7122436772</p>
+<p>📞 WhatsApp: +52 712 243 6772</p>
+
+<p>Contáctanos para desarrollar tu proyecto arquitectónico.</p>
+
+</div>
 
 </section>
 
-<a class="whatsapp" href="https://wa.me/+52 7122436772" target="_blank">
+<a class="whatsapp" href="https://wa.me/527122436772" target="_blank">
 WhatsApp
 </a>
 
